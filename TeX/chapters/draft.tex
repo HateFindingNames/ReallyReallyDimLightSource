@@ -1,0 +1,44 @@
+\chapter{Drafting}
+\nocite{*}
+\begin{figure}[h]
+    \centering
+    \includesvg[width=.8\textwidth, inkscapelatex=true]{graphics/diagram}
+    \caption[Sketch of the optical setup]{Sketch of the optical setup.}
+    \label{fig:optical setup sketch}
+\end{figure}
+
+\begin{itemize}
+    \item Laser: \url{https://www.thorlabs.com/thorproduct.cfm?partnumber=DJ532-10}
+    \item Attenuator(s): \url{https://www.thorlabs.com/thorproduct.cfm?partnumber=ATT30/M-YAG}
+    \item Adjustable Attenuator: \url{https://www.thorlabs.com/thorproduct.cfm?partnumber=NDC-100C-4M-A}
+    \item Detector: \url{https://www.thorlabs.com/thorproduct.cfm?partnumber=SPDMA}
+\end{itemize}
+
+The photon count per second with given laser power \(P\) and wavelength \(\lambda\) expands as follows
+\begin{align}
+    f_{0,Ph} = \frac{P}{E_{Ph}} = P \cdot \frac{\lambda}{c h}
+    \label{eq:unattenuated photons per second}
+\end{align}
+
+Since even the weakest laser source is still far too powerfull, hence emitting too much photons per second, an array of attenuators are used.
+The proposed attenuators exhibit static behavior with a typical attenuation ratio of \qty{0.05}{\percent}.
+To accomodate expected fluctuations in beam attenuation due to thermal effects, stray photons (what else?) an  attenuator with lower but adjustable attenuation coefficient is placed after the array.
+\begin{align}
+    f_{n,Ph} = f_{0,Ph} \cdot \mu^n
+    \label{eq:attenuated photons per second}
+\end{align}
+where \(n\) is the number of static attenuating elements.
+
+\section{Attenuation}
+    To detect and distinguish single (or pseudo-single) photons it is mandatory to reduce the primary source power by many orders of magnitude until the (average) photon flux at the active detector area (\qty{500}{\micro\metre}) reaches a level well below its dead-time.
+    \begin{align}
+        I_n = \frac{P_n}{A} &= f_{0,Ph} \cdot \mu^n \cdot \frac{c h}{\lambda}\\
+        &\Leftrightarrow\\
+        N_{detector} &=
+    \end{align}
+\section{Interesting Links}
+    \url{https://www.sps.ch/artikel/progresses/wave-particle-duality-of-light-for-the-classroom-13/}
+
+    \url{http://marty-green.blogspot.com/2016/02/there-are-no-pea-shooters-for-photons.html}
+    
+    \url{https://www.rp-photonics.com/spotlight_2015_02_05.html}
